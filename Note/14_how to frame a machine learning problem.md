@@ -1,4 +1,3 @@
-https://github.com/yasin-arafat-05/machine_learning/blob/main/note/14_step_solve_business_prb.md
 ### Framing a Machine Learning Problem for a Business Scenario
 
 This guide outlines the steps to frame a machine learning problem effectively in a business context.
@@ -43,4 +42,10 @@ Define how the model’s success will be measured. Examples:
 
 This framework ensures that the machine learning problem is well-defined and aligned with business objectives for maximum impact.
 
-For additional notes you can check here 👉🏻 
+For additional notes you can check here 👉🏻 [Note](https://github.com/yasin-arafat-05/machine_learning/blob/main/note/14_step_solve_business_prb.md
+)
+
+### Credits
+
+Credit goes to [Yasin Arafat](https://github.com/yasin-arafat-05) for providing the original notes.
+
