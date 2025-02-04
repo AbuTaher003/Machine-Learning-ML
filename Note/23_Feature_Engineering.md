@@ -70,3 +70,12 @@ df_scaled = scaler.fit_transform(df)
 Feature Engineering is an essential step in machine learning. It determines how well a model can learn from the data and make accurate predictions. Proper feature selection and transformation can significantly improve the efficiency and effectiveness of machine learning models.
 
 🚀 **Better features = Better models!**
+
+
+
+
+For additional notes you can check here 👉🏻 [Note](https://github.com/yasin-arafat-05/machine_learning/blob/main/note/23_feature_engg.md)
+
+### Credits
+
+Credit goes to [Yasin Arafat](https://github.com/yasin-arafat-05) for providing the original notes.
