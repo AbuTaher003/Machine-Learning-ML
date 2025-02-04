@@ -73,8 +73,8 @@ Feature Engineering is an essential step in machine learning. It determines how 
 
 
 
-
-For additional notes you can check here 👉🏻 [Note](https://drive.google.com/file/d/1cIfHY-XL7n4BWU6TqPBit999fZOgSUSW/view)
+---
+📒 For additional notes you can check here 👉🏻 [Note](https://drive.google.com/file/d/1cIfHY-XL7n4BWU6TqPBit999fZOgSUSW/view)
 
 ### Credits
 
