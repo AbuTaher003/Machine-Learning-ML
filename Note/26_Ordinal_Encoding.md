@@ -5,7 +5,7 @@ You can access the code using the following link:
 [View Code Here]()
 
 ---
-For additional notes you can check here 👉🏻 [Note]()
+For additional notes you can check here 👉🏻 [Note](https://drive.google.com/file/d/1Lk6V-M4avg4v8ycZR9Zx355degNV4NVq/view)
 
 ### Credits
 
