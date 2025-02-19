@@ -1,3 +1,13 @@
+Go to the code, where you will find the respective code for this topic. Explanation is provided through comments within the code to ensure clarity and understanding.
+
+You can access the code using the following link:
+[View Code Here]()
+
+---
+---
+
+
+
 # Scikit-Learn পাইপলাইন: সহজভাবে বোঝা
 
 Scikit-Learn-এর **Pipeline** হল একটা দারুণ টুল, যেটা **মেশিন লার্নিং-এর কাজকে সহজ করে**। এটা ডাটা প্রসেসিং আর মডেলিং-এর ধাপগুলো **একসাথে এনে** কোডকে **পরিষ্কার আর ইউজফুল** বানায়।
