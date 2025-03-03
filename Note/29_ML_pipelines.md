@@ -130,3 +130,9 @@ pipeline = Pipeline([
 - **কাস্টম ট্রান্সফরমার বানিয়ে নিজের মতো প্রসেসিং করা যায়।**
 
 
+---
+For additional notes you can check here 👉🏻 [Note](https://drive.google.com/file/d/1DhEWtx3VZ3S_tPsJ5sPVaepvc9mnbfRv/view)
+
+### Credits
+
+Credit goes to [Yasin Arafat](https://github.com/yasin-arafat-05) for providing the original notes.
