@@ -4,7 +4,7 @@ You can access the code using the following link:
 [View Code Here](https://github.com/AbuTaher003/Machine-Learning-ML-/blob/main/Code/34_working-with-dates-and-time.ipynb)
 
 ---
-For additional notes you can check here 👉🏻 [Note]()
+For additional notes you can check here 👉🏻 [Note](https://drive.google.com/file/d/1_7oFZwGyhrusZMRE-ERe-Ift8TR_hEPo/view)
 
 ### Credits
 
