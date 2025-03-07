@@ -4,7 +4,7 @@ You can access the code using the following link:
 [View Code Here]()
 
 ---
-For additional notes you can check here 👉🏻 [Note]()
+For additional notes you can check here 👉🏻 [Note](https://drive.google.com/file/d/1MwqN6ULrOVdaiFvidfmFEtUGdnfVXHQ6/view)
 
 ### Credits
 
