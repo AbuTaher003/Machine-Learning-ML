@@ -2,7 +2,7 @@ Go to the code, where you will find the respective code for this topic. Explanat
 
 
 Binning Code: 
-[View Code Here]()
+[View Code Here](https://github.com/AbuTaher003/Machine-Learning-ML-/blob/main/Code/32_1_Binning.ipynb)
 
 Binarization Code: 
 [View Code Here](https://github.com/AbuTaher003/Machine-Learning-ML-/blob/main/Code/32_2_Binarization.ipynb)
