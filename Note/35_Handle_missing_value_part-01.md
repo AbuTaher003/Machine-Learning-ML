@@ -4,8 +4,7 @@ You can access the code using the following link:
 [View Code Here](https://github.com/AbuTaher003/Machine-Learning-ML-/blob/main/Code/35_complete_case_analysis.ipynb)
 
 ---
-For additional notes you can check here 👉🏻 [Note](
-)
+For additional notes you can check here 👉🏻 [Note](https://drive.google.com/file/d/1g2XHTG7s1fI5-cqL2jV3pKD2KWI5_CbX/view)
 
 ### Credits
 
