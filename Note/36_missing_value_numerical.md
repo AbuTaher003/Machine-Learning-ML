@@ -3,7 +3,7 @@ Go to the code, where you will find the respective code for this topic. Explanat
 You can access the code using the following link:
 [View Code Here](https://github.com/AbuTaher003/Machine-Learning-ML-/blob/main/Code/36_1_mean_median_imputation.ipynb)
 and
-[Here]()
+[Here](https://github.com/AbuTaher003/Machine-Learning-ML-/blob/main/Code/36_2_Arbitrary_value_imputation.ipynb)
 
 ---
 For additional notes you can check here 👉🏻 [Note](https://drive.google.com/file/d/1lUQrG4xEzLebNKwJwjLVVp3qPzyxQryi/view)
