@@ -1,6 +1,7 @@
 ```"No code for this lecture"```
 ---
-
+[Hand_note_link](https://drive.google.com/file/d/1wndG-FCdJbV49JyyL2kHJaM0EdR-VL17/view)
+---
 
 **Curse of Dimensionality (মাত্রার অভিশাপ)**
 
