@@ -1,3 +1,7 @@
+```"No code for this lecture"```
+---
+
+
 **Curse of Dimensionality (মাত্রার অভিশাপ)**
 
 ### **পরিচিতি**
