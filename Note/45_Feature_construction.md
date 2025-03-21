@@ -1,4 +1,4 @@
-[code](https://github.com/AbuTaher003/Machine-Learning-ML-/blob/main/Code/45_Featuer_Construction.ipynb)
+[code_link](https://github.com/AbuTaher003/Machine-Learning-ML-/blob/main/Code/45_Featuer_Construction.ipynb)
 ---
 **ফিচার কনস্ট্রাকশন (Feature Construction)**
 
