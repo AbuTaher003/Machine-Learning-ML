@@ -1,5 +1,8 @@
 [code_link](https://github.com/AbuTaher003/Machine-Learning-ML-/blob/main/Code/45_Featuer_Construction.ipynb)
 ---
+[Hand_note_link](https://drive.google.com/file/d/1evUdmRWVJFb0E7NNBEZXKkZQ5zcQ5wLf/view)
+---
+
 **ফিচার কনস্ট্রাকশন (Feature Construction)**
 
 **ফিচার কনস্ট্রাকশন কী?**
