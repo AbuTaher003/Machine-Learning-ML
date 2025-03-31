@@ -1,3 +1,7 @@
+For respective codes [Click here]()
+
+
+
 **🔹 PCA (Principal Component Analysis) - একদম সহজভাবে বোঝানো নোট 🔹**
 
 ### 🧐 PCA কী?
