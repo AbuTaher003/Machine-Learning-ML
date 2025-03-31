@@ -1,6 +1,6 @@
-For respective codes [Click here]()
+For respective codes [Click here](https://github.com/AbuTaher003/Machine-Learning-ML-/blob/main/Code/47_Pca_step_by_step.ipynb)
 
-
+------------
 
 **🔹 PCA (Principal Component Analysis) - একদম সহজভাবে বোঝানো নোট 🔹**
 
