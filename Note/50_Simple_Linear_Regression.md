@@ -1,6 +1,6 @@
 Hand notes on Simple Linear Regression
 ---
-[Note]()
+[Note](https://drive.google.com/file/d/1TeScSc1j6pzm95JgIVy8o6hdeVnxbvv5/view?usp=drive_link)
 ---
 Codes , corresponding to this tutorial.
 ---
