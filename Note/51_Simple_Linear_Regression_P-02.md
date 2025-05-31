@@ -4,5 +4,5 @@ Hand notes---->
 ---
 Codes---->
 ---
-[Codes]()
+[Codes](https://github.com/AbuTaher003/Machine-Learning-ML/blob/main/Code/51_Simple_Linear_Regression_P-02.ipynb)
 ---
