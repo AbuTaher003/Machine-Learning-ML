@@ -1,7 +1,7 @@
 For Hand notes you can check here 👉🏻 [Note](https://drive.google.com/file/d/1rdeXhQZpS66lztattoxmcynTckFTrNOs/view?usp=drive_link)
 ---
-Additional note for 
-```Equation of a Hyper-plane in N dimensions``` [click here]()
+For Additional Tutorial on "How to find the equation" for  
+```Equation of a Hyper-plane in N dimensions``` [click here](https://youtu.be/10e-b8AgdVA?si=mQJcphOAvqdjs_YQ)
 
 
 👉🏻 Go to the code, where you will find the respective code for this topic. Explanation is provided through comments within the code to ensure clarity and understanding.
