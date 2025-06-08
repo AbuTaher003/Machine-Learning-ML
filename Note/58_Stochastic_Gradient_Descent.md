@@ -6,5 +6,5 @@ You can access the code using the following link:
 [View Code Here](https://github.com/AbuTaher003/Machine-Learning-ML/blob/main/Code/58_Stochastic_gradient_descent.ipynb)
 
 ---
-For Animations and codes you can check here 👉🏻 [Click here]()
+For Animations and codes you can check here 👉🏻 [Click here](https://github.com/campusx-official/100-days-of-machine-learning/tree/main/day52-types-of-gradient-descent)
 ---
