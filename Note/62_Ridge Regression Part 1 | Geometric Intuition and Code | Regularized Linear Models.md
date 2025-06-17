@@ -1,4 +1,4 @@
-For Hand notes you can check here 👉🏻 [Note]()
+For Hand notes you can check here 👉🏻 [Note](https://drive.google.com/file/d/16XiczUtQ7qgTMz0Y6CM4m9SsG4n82SIK/view?usp=drive_link)
 ---
 Go to the code, where you will find the respective code for this topic. Explanation is provided through comments within the code to ensure clarity and understanding.
 
