@@ -4,6 +4,6 @@ Go to the code, where you will find the respective code for this topic. Explanat
 
 You can access the code using the following link:
 [View Code Here](https://github.com/AbuTaher003/Machine-Learning-ML/blob/main/Code/63_01_ridge-regression-from-scratch-m-and-b.ipynb.ipynb) and 
-[here]()
+[here](https://github.com/AbuTaher003/Machine-Learning-ML/blob/main/Code/63_02_ridge-regression-from-scratch.ipynb)
 
 ---
