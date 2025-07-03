@@ -1,8 +1,4 @@
-For Hand notes you can check here 👉🏻 [Note]()
+For Hand notes you can check here 👉🏻 [Note](https://drive.google.com/file/d/18gfG8nV0kKi3xEa_sFJjA1qIWLfWPOTv/view?usp=drive_link)
 ---
-Go to the code, where you will find the respective code for this topic. Explanation is provided through comments within the code to ensure clarity and understanding.
-
-You can access the code using the following link:
-[View Code Here]()
-
+Code will be provided in next lecture.
 ---
