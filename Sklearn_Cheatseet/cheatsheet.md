@@ -62,30 +62,24 @@ X_train, X_test, y_train, y_test = train_test_split(
 ---
 
 ## ৩. Preprocessing (ডেটা প্রস্তুতি)
-
 ```python
 from sklearn.preprocessing import StandardScaler, MinMaxScaler, LabelEncoder, OneHotEncoder, PolynomialFeatures
 from sklearn.impute import SimpleImputer
 
-# স্কেলিং (mean=0, std=1)
-scaler = StandardScaler()
-X_scaled = scaler.fit_transform(X_train)
+scaler = StandardScaler()                      # StandardScaler দিয়ে ডেটা স্কেলিং করা (Mean=0, Std=1)
+X_scaled = scaler.fit_transform(X_train)      # fit_transform করে ডেটার mean/std বের করে স্কেলিং করে
 
-# লেবেল এনকোডিং (categorical to number)
-le = LabelEncoder()
-y_encoded = le.fit_transform(y_train)
+le = LabelEncoder()                            # LabelEncoder দিয়ে ক্যাটেগরিকাল লেবেলকে নম্বরে রূপান্তর করা
+y_encoded = le.fit_transform(y_train)         # fit_transform দিয়ে লেবেলকে unique নম্বর দেয়
 
-# One Hot Encoding (categorical to binary columns)
-encoder = OneHotEncoder(sparse=False)
-X_onehot = encoder.fit_transform(X_train.reshape(-1, 1))
+encoder = OneHotEncoder(sparse=False)          # OneHotEncoder দিয়ে ক্যাটেগরিকাল ফিচারকে বাইনারি কলামে রূপান্তর করা
+X_onehot = encoder.fit_transform(X_train.reshape(-1, 1))  # reshape(-1,1) দিয়ে 1D কে 2D বানানো হয়
 
-# মিসিং ডেটা পূরণ
-imputer = SimpleImputer(strategy='mean')
-X_imputed = imputer.fit_transform(X_train)
+imputer = SimpleImputer(strategy='mean')      # SimpleImputer দিয়ে মিসিং ভ্যালু (NaN) পূরণ করা
+X_imputed = imputer.fit_transform(X_train)    # মিসিং জায়গায় কলামের গড় মান বসানো হয়
 
-# পলিনোমিয়াল ফিচার তৈরি
-poly = PolynomialFeatures(degree=2)
-X_poly = poly.fit_transform(X_train)
+poly = PolynomialFeatures(degree=2)           # PolynomialFeatures দিয়ে degree=2 পর্যন্ত নতুন ফিচার তৈরি
+X_poly = poly.fit_transform(X_train)           # যেমন: x², x*y ইত্যাদি interaction terms তৈরি হয়
 ```
 
 > **ব্যাখ্যা:**
@@ -98,25 +92,27 @@ X_poly = poly.fit_transform(X_train)
 ### Classification (ক্লাসিফিকেশন মডেল)
 
 ```python
-from sklearn.linear_model import LogisticRegression
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
-from sklearn.svm import SVC
+from sklearn.linear_model import LogisticRegression          # Logistic Regression মডেল
+from sklearn.tree import DecisionTreeClassifier               # Decision Tree Classifier মডেল
+from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier  # Ensemble মডেল
+from sklearn.svm import SVC                                   # Support Vector Classifier (SVM)
 
-model = LogisticRegression()
-model.fit(X_train, y_train)
-y_pred = model.predict(X_test)
+model = LogisticRegression()                                 # Logistic Regression মডেল ইনস্ট্যান্স তৈরি
+model.fit(X_train, y_train)                                  # ট্রেনিং ডেটা দিয়ে মডেল শেখানো
+y_pred = model.predict(X_test)                               # টেস্ট ডেটা দিয়ে প্রিডিকশন করা
+
 ```
 
 ### Regression (রিগ্রেশন মডেল)
 
 ```python
-from sklearn.linear_model import LinearRegression, Ridge, Lasso
-from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor
+from sklearn.linear_model import LinearRegression, Ridge, Lasso                 # Linear, Ridge, Lasso regression মডেল
+from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor   # Ensemble regression মডেল
 
-model = LinearRegression()
-model.fit(X_train, y_train)
-y_pred = model.predict(X_test)
+model = LinearRegression()                               # Linear Regression মডেল ইনস্ট্যান্স তৈরি
+model.fit(X_train, y_train)                              # ট্রেনিং ডেটা দিয়ে মডেল শেখানো
+y_pred = model.predict(X_test)                           # টেস্ট ডেটা দিয়ে প্রিডিকশন করা
+
 ```
 
 ---
@@ -128,11 +124,12 @@ y_pred = model.predict(X_test)
 ```python
 from sklearn.metrics import accuracy_score, confusion_matrix, classification_report, f1_score, roc_auc_score
 
-print("Accuracy:", accuracy_score(y_test, y_pred))
-print("Confusion Matrix:\n", confusion_matrix(y_test, y_pred))
-print("Classification Report:\n", classification_report(y_test, y_pred))
-print("F1 Score:", f1_score(y_test, y_pred))
-print("ROC AUC Score:", roc_auc_score(y_test, y_pred))
+print("Accuracy:", accuracy_score(y_test, y_pred))                     # সঠিক ভবিষ্যতের হার (Accuracy)
+print("Confusion Matrix:\n", confusion_matrix(y_test, y_pred))        # মডেলের ভুল-সঠিক ভবিষ্যতের ম্যাট্রিক্স
+print("Classification Report:\n", classification_report(y_test, y_pred))  # Precision, Recall, F1-score এর বিস্তারিত রিপোর্ট
+print("F1 Score:", f1_score(y_test, y_pred))                           # Precision ও Recall এর হরমোনিক মীন
+print("ROC AUC Score:", roc_auc_score(y_test, y_pred))                 # ROC curve এর নিচের এলাকা, মডেলের পারফরম্যান্স মাপার মানদণ্ড
+
 ```
 
 ### Regression Metrics
@@ -140,9 +137,10 @@ print("ROC AUC Score:", roc_auc_score(y_test, y_pred))
 ```python
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 
-print("MSE:", mean_squared_error(y_test, y_pred))
-print("MAE:", mean_absolute_error(y_test, y_pred))
-print("R2 Score:", r2_score(y_test, y_pred))
+print("MSE:", mean_squared_error(y_test, y_pred))      # Mean Squared Error (গড় বর্গমূল ত্রুটি), ত্রুটির পরিমাণ মাপার জন্য
+print("MAE:", mean_absolute_error(y_test, y_pred))     # Mean Absolute Error (গড় সঠিক ত্রুটি), ত্রুটির গড় মাপ
+print("R2 Score:", r2_score(y_test, y_pred))            # R² স্কোর, মডেলের ব্যাখ্যা ক্ষমতা (১=পারফেক্ট, ০=খারাপ)
+
 ```
 
 ---
@@ -152,15 +150,16 @@ print("R2 Score:", r2_score(y_test, y_pred))
 ```python
 from sklearn.model_selection import cross_val_score, GridSearchCV
 
-# Cross validation
-scores = cross_val_score(model, X_train, y_train, cv=5)
-print("Cross-validation scores:", scores)
+# Cross validation দিয়ে মডেলের পারফরম্যান্স যাচাই করা
+scores = cross_val_score(model, X_train, y_train, cv=5)    # ৫ ভাগে ডেটা ভাগ করে বারবার মডেল ট্রেন ও টেস্ট করে
+print("Cross-validation scores:", scores)                 # প্রতিবারের স্কোর দেখাবে
 
-# Grid Search for hyperparameter tuning
-params = {'C': [0.1, 1, 10]}
-grid = GridSearchCV(LogisticRegression(), param_grid=params, cv=5)
-grid.fit(X_train, y_train)
-print("Best params:", grid.best_params_)
+# Grid Search দিয়ে Hyperparameter Tuning করা
+params = {'C': [0.1, 1, 10]}                              # Logistic Regression এর C প্যারামিটার ভ্যালু সেট করা
+grid = GridSearchCV(LogisticRegression(), param_grid=params, cv=5)  # ৫ ফোল্ড ক্রস-ভ্যালিডেশনে বেস্ট প্যারামিটার খোঁজা
+grid.fit(X_train, y_train)                                 # মডেল ট্রেন করা
+print("Best params:", grid.best_params_)                  # সেরা প্যারামিটার দেখাবে
+
 ```
 
 ---
@@ -171,12 +170,13 @@ print("Best params:", grid.best_params_)
 from sklearn.pipeline import Pipeline
 
 pipe = Pipeline([
-    ('scaler', StandardScaler()),
-    ('model', LogisticRegression())
+    ('scaler', StandardScaler()),           # প্রথমে ডেটা স্কেলিং করবে (Mean=0, Std=1)
+    ('model', LogisticRegression())         # তারপর Logistic Regression মডেল ট্রেন করবে
 ])
 
-pipe.fit(X_train, y_train)
-y_pred = pipe.predict(X_test)
+pipe.fit(X_train, y_train)                   # Pipeline পুরো প্রোসেস একসাথে ট্রেনিং
+y_pred = pipe.predict(X_test)                # টেস্ট ডেটায় প্রিডিকশন করবে
+
 ```
 
 ---
@@ -186,16 +186,17 @@ y_pred = pipe.predict(X_test)
 ```python
 from sklearn.feature_selection import SelectKBest, chi2, RFE
 
-selector = SelectKBest(score_func=chi2, k=5)
-X_new = selector.fit_transform(X_train, y_train)
+selector = SelectKBest(score_func=chi2, k=5)      # Chi-square স্কোর দিয়ে সেরা ৫টা ফিচার বেছে নেওয়া
+X_new = selector.fit_transform(X_train, y_train) # ফিচার সিলেকশনের পর নতুন ডেটাসেট
 
-# Recursive Feature Elimination
+# Recursive Feature Elimination (RFE) - পুনরাবৃত্তিমূলক ফিচার বাদ দেয়া
 from sklearn.linear_model import LogisticRegression
 from sklearn.feature_selection import RFE
 
-model = LogisticRegression()
-rfe = RFE(model, n_features_to_select=5)
-X_rfe = rfe.fit_transform(X_train, y_train)
+model = LogisticRegression()                       # বেস মডেল হিসেবে Logistic Regression
+rfe = RFE(model, n_features_to_select=5)          # ৫টা ফিচার বাছাই করার জন্য RFE অবজেক্ট
+X_rfe = rfe.fit_transform(X_train, y_train)       # ফিচার নির্বাচন করে নতুন ডেটাসেট তৈরি
+
 ```
 
 ---
@@ -205,13 +206,14 @@ X_rfe = rfe.fit_transform(X_train, y_train)
 ```python
 from sklearn.cluster import KMeans, DBSCAN
 
-kmeans = KMeans(n_clusters=3)
-kmeans.fit(X_train)
-labels = kmeans.labels_
+kmeans = KMeans(n_clusters=3)         # KMeans ক্লাস্টারিং, ৩টা গ্রুপ বানাবে
+kmeans.fit(X_train)                   # ডেটা দিয়ে ক্লাস্টারিং শেখানো
+labels = kmeans.labels_               # প্রতিটি ডেটার ক্লাস্টার লেবেল (0,1,2)
 
-dbscan = DBSCAN(eps=0.5, min_samples=5)
-dbscan.fit(X_train)
-labels_db = dbscan.labels_
+dbscan = DBSCAN(eps=0.5, min_samples=5)  # DBSCAN ক্লাস্টারিং, eps=0.5 (দূরত্ব), min_samples=5 (নূন্যতম পয়েন্ট)
+dbscan.fit(X_train)                      # ডেটা দিয়ে ক্লাস্টারিং শেখানো
+labels_db = dbscan.labels_               # ডেটার ক্লাস্টার লেবেল (-1 মানে noise/outlier)
+
 ```
 
 ---
@@ -219,13 +221,16 @@ labels_db = dbscan.labels_
 ## ১০. Dimensionality Reduction (মাত্রা হ্রাস)
 
 ```python
+ঠিক ভাই, ডান পাশে কমেন্ট সহ কোডটা দিলাম:
+
+```python
 from sklearn.decomposition import PCA, TruncatedSVD
 
-pca = PCA(n_components=2)
-X_pca = pca.fit_transform(X_train)
+pca = PCA(n_components=2)                  # PCA দিয়ে মাত্রা হ্রাস (Dimensionality Reduction), ২টা প্রধান কম্পোনেন্ট নেওয়া
+X_pca = pca.fit_transform(X_train)        # ডেটা থেকে প্রধান ফিচার বের করে নতুন ডেটাসেট তৈরি
 
-svd = TruncatedSVD(n_components=2)
-X_svd = svd.fit_transform(X_train)
+svd = TruncatedSVD(n_components=2)        # TruncatedSVD, PCA এর মতো মাত্রা হ্রাসের আরেক পদ্ধতি, বিশেষ করে sparse ডেটার জন্য ভালো
+X_svd = svd.fit_transform(X_train)        # ডেটার মাত্রা কমিয়ে নতুন ফিচার তৈরি
 ```
 
 ---
@@ -235,13 +240,14 @@ X_svd = svd.fit_transform(X_train)
 ```python
 from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
 
-texts = ["machine learning is fun", "sklearn is powerful"]
+texts = ["machine learning is fun", "sklearn is powerful"]   # টেক্সট ডেটার স্যাম্পল
 
-cv = CountVectorizer()
-X_counts = cv.fit_transform(texts)
+cv = CountVectorizer()                                       # CountVectorizer টেক্সট থেকে শব্দের গণনা (বগ অফ ওয়ার্ডস)
+X_counts = cv.fit_transform(texts)                           # টেক্সটকে সংখ্যার ম্যাট্রিক্সে রূপান্তর করা
 
-tfidf = TfidfVectorizer()
-X_tfidf = tfidf.fit_transform(texts)
+tfidf = TfidfVectorizer()                                    # TfidfVectorizer শব্দের গুরুত্ব (TF-IDF) হিসাব করে
+X_tfidf = tfidf.fit_transform(texts)                         # টেক্সটকে TF-IDF ভেক্টরে রূপান্তর করা
+
 ```
 
 ---
@@ -251,8 +257,9 @@ X_tfidf = tfidf.fit_transform(texts)
 ```python
 import joblib
 
-joblib.dump(model, 'model.pkl')
-model = joblib.load('model.pkl')
+joblib.dump(model, 'model.pkl')      # মডেলকে 'model.pkl' ফাইলে সংরক্ষণ করা (save)
+model = joblib.load('model.pkl')     # সংরক্ষিত মডেলকে ফাইল থেকে লোড করা (load) ব্যবহার করার জন্য
+
 ```
 
 ---
@@ -260,9 +267,13 @@ model = joblib.load('model.pkl')
 ## ১৩. Utility Functions (সহজ কাজের ফাংশন)
 
 ```python
-model.get_params()      # মডেলের বর্তমান সেটিংস দেখো
-model.set_params()      # নতুন সেটিংস দাও
-model.score(X_test, y_test)  # Accuracy বা R2 স্কোর পাও
+model.get_params()                   # মডেলের সব বর্তমান প্যারামিটার ও সেটিংস দেখার জন্য
+model.set_params(**new_params)      # নতুন প্যারামিটার দিয়ে মডেল আপডেট করার জন্য, যেমন set_params(C=1.0)
+model.score(X_test, y_test)          # মডেলের পারফরম্যান্স স্কোর মাপার জন্য, যেমন accuracy বা R² স্কোর
+
+# set_params()-এ তোমাকে অবশ্যই নতুন প্যারামিটার dictionary আকারে দিতে হবে, উদাহরণ:
+
+model.set_params(C=0.5, max_iter=200)
 ```
 
 ---
